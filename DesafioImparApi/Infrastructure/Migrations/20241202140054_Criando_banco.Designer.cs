@@ -8,11 +8,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Infrastructure.Migrations
+namespace Impar.Infra.Repository.Migrations
 {
     [DbContext(typeof(ContextBase))]
-    [Migration("20241201181957_CriandoDatabase")]
-    partial class CriandoDatabase
+    [Migration("20241202140054_Criando_banco")]
+    partial class Criando_banco
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,7 +23,7 @@ namespace Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Entities.Entities.Car", b =>
+            modelBuilder.Entity("Impar.Infra.Data.Entities.Car", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -48,7 +48,7 @@ namespace Infrastructure.Migrations
                     b.ToTable("Car");
                 });
 
-            modelBuilder.Entity("Entities.Entities.Photo", b =>
+            modelBuilder.Entity("Impar.Infra.Data.Entities.Photo", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -65,9 +65,9 @@ namespace Infrastructure.Migrations
                     b.ToTable("Photo");
                 });
 
-            modelBuilder.Entity("Entities.Entities.Car", b =>
+            modelBuilder.Entity("Impar.Infra.Data.Entities.Car", b =>
                 {
-                    b.HasOne("Entities.Entities.Photo", "Photo")
+                    b.HasOne("Impar.Infra.Data.Entities.Photo", "Photo")
                         .WithMany()
                         .HasForeignKey("PhotoId")
                         .OnDelete(DeleteBehavior.Cascade)

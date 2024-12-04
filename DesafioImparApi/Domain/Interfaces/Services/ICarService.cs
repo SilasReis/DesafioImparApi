@@ -10,5 +10,6 @@ namespace Domain.Interfaces.Services
         Task<List<CarDto>> List(int page, int itens);
         Task<CarDto?> FindById(long Id);
         Task<bool> Delete(long Id);
+        Task<List<CarDto>> ListByName(string name);
     }
 }

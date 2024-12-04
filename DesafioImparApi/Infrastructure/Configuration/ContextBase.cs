@@ -1,11 +1,5 @@
 ﻿using Impar.Infra.Data.Entities;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infrastructure.Configuration
 {
@@ -13,11 +7,9 @@ namespace Infrastructure.Configuration
     {
         public ContextBase(DbContextOptions<ContextBase> options) : base(options)
         {
-
         }
 
         public DbSet<Car> Car { get; set; }
-
         public DbSet<Photo> Photo { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -29,12 +21,9 @@ namespace Infrastructure.Configuration
             }
         }
 
-
-
-
         public string GetConnectionString()
         {
-            return "Server=NOTE-E22\\DB_KOVR;Database=Desafio;Persist Security Info=true;Trusted_Connection=True;TrustServerCertificate=True";
+            return "Server = tcp:processo - seletivo.database.windows.net,1433; Initial Catalog = sqldb - silasreis; Persist Security Info = False; User ID = silasreis; Password = 2kh7ZiLt65X4ZjwduiQN8HvY; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30";
         }
     }
 }

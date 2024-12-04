@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Infrastructure.Migrations
+namespace Impar.Infra.Repository.Migrations
 {
     [DbContext(typeof(ContextBase))]
     partial class ContextBaseModelSnapshot : ModelSnapshot
@@ -21,7 +21,7 @@ namespace Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Entities.Entities.Car", b =>
+            modelBuilder.Entity("Impar.Infra.Data.Entities.Car", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -46,7 +46,7 @@ namespace Infrastructure.Migrations
                     b.ToTable("Car");
                 });
 
-            modelBuilder.Entity("Entities.Entities.Photo", b =>
+            modelBuilder.Entity("Impar.Infra.Data.Entities.Photo", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -63,9 +63,9 @@ namespace Infrastructure.Migrations
                     b.ToTable("Photo");
                 });
 
-            modelBuilder.Entity("Entities.Entities.Car", b =>
+            modelBuilder.Entity("Impar.Infra.Data.Entities.Car", b =>
                 {
-                    b.HasOne("Entities.Entities.Photo", "Photo")
+                    b.HasOne("Impar.Infra.Data.Entities.Photo", "Photo")
                         .WithMany()
                         .HasForeignKey("PhotoId")
                         .OnDelete(DeleteBehavior.Cascade)

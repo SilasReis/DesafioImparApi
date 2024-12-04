@@ -56,6 +56,26 @@ namespace Infrastructure.Repository.Generic
         }
 
 
+        public async Task<List<T>> ListByName(string name)
+        {
+            using var data = new ContextBase(_optionsBuilder);
+
+            var query = data.Set<T>().AsQueryable();
+
+            var entityType = data.Model.FindEntityType(typeof(T));
+            if (entityType != null)
+            {
+                foreach (var navigation in entityType.GetNavigations())
+                {
+                    query = query.Include(navigation.Name);
+                }
+            }
+
+            return await query
+                .Where(e => EF.Property<string>(e, "Name").Contains(name))
+                .ToListAsync();
+        }
+
         public async Task<List<T>> List(int page, int itens)
         {
             using ContextBase data = new(_optionsBuilder);

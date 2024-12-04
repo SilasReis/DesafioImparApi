@@ -47,6 +47,12 @@ namespace DesafioImpar.WebApi.Controllers
             return await _serviceCar.FindById(id);
         }
 
+        [HttpGet("GetByName/{name}")]
+        [AllowAnonymous]
+        public async Task<List<CarDto>> GetByName(string name)
+        {
+            return await _serviceCar.ListByName(name);
+        }
 
         [HttpDelete]
         [AllowAnonymous]

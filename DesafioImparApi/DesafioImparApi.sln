@@ -11,9 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{FA959090
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Impar.Infra.Repository", "Infrastructure\Impar.Infra.Repository.csproj", "{4A491A01-6B0E-418F-B128-FEA9BDC88986}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{B49F2741-0331-4793-9E84-FA7C200154A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Impar.Domain", "Domain\Impar.Domain.csproj", "{B49F2741-0331-4793-9E84-FA7C200154A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioImpar.WebApi", "DesafioImpar.WebApi\DesafioImpar.WebApi.csproj", "{E2430AFE-9FD7-4B79-9D42-5CB95732C216}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impar.WebApi", "DesafioImpar.WebApi\Impar.WebApi.csproj", "{E2430AFE-9FD7-4B79-9D42-5CB95732C216}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impar.Infra.Data", "Data\Impar.Infra.Data.csproj", "{CEAAF5FE-BB23-4DD6-9E3E-9E1CE994AAD5}"
 EndProject

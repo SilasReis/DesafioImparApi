@@ -2,9 +2,9 @@
 
 #nullable disable
 
-namespace Infrastructure.Migrations
+namespace Impar.Infra.Repository.Migrations
 {
-    public partial class CriandoDatabase : Migration
+    public partial class Criando_banco : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

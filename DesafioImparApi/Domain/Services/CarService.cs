@@ -48,6 +48,11 @@ namespace Domain.Services
             return _mapper.Map<List<CarDto>>(await _carRepository.List(page, itens));
         }
 
+        public async Task<List<CarDto>> ListByName(string name) 
+        {
+            return _mapper.Map<List<CarDto>>(await _carRepository.ListByName(name));
+        }
+
         public async Task<bool> Update(CarDto car)
         {
             Car? carro = await _carRepository.GetEntityById(car.Id);

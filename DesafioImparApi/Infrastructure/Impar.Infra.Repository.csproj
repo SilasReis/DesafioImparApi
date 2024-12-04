@@ -24,7 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Data\Impar.Infra.Data.csproj" />
-    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Domain\Impar.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
